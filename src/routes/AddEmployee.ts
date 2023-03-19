@@ -29,6 +29,3 @@ const addEmployee = async (req: Request, res: Response) => {
 };
 
 export default addEmployee;
-
-//HQauQQnqQifijU91VYiGosXfit8vwahtPbkyJnRNmf4Q
-//HYpEMnmiUxuPCKka9A33ALGMEGeHsnWnCSRHJssmgaPa
