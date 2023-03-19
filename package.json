@@ -17,6 +17,7 @@
   "scripts": {
     "build" : "tsc",
     "start" : "node build/index.js",
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" ts-node --exec \"ts-node src/index.ts\"",
     "john": "nodemon --watch src -e ts --exec ts-node src/index.ts"
   }
 }
