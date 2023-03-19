@@ -14,9 +14,7 @@ import deleteEmployee from "./routes/DeleteEmployee";
 import updateEmployee from "./routes/UpdateEmployee";
 import updateDate from "./routes/updateDate";
 
-import CryptoJS from "crypto-js";
 
-import secret from "../../fe/src/guideSecret.json";
 import getWallet from "./routes/getWallet";
 
 const app = express();
@@ -25,15 +23,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const PORT = 5000;
-
-var encrypt = CryptoJS.AES.encrypt(JSON.stringify(secret), "sad");
-
-// console.log(encrypt.toString())
-
-var decrypt = CryptoJS.AES.decrypt(encrypt, "sad");
-
-// console.log(decrypt.toString(CryptoJS.enc.Utf8))
+const PORT = process.env.PORT || 5000;
 
 //req wallet
 
