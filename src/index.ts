@@ -14,8 +14,8 @@ import deleteEmployee from "./routes/DeleteEmployee";
 import updateEmployee from "./routes/UpdateEmployee";
 import updateDate from "./routes/updateDate";
 
-
 import getWallet from "./routes/getWallet";
+import deleteAll from "./routes/DeleteAll";
 
 const app = express();
 
@@ -39,6 +39,8 @@ app.put("/updateDate/:masterWallet", updateDate);
 app.post("/addEmployee/:masterWallet", addEmployee);
 app.delete("/deleteEmployee/:masterWallet/:index", deleteEmployee);
 app.put("/updateEmployee/:masterWallet/:index", updateEmployee);
+app.delete("/deleteAll/:masterWallet", deleteAll);
+
 
 mongoose.set("strictQuery", false);
 mongoose
